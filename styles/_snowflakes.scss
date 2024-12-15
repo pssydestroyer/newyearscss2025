@@ -1,0 +1,25 @@
+@use 'variables' as vars;
+@use 'sass:math';
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 20px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      left: math.random(100) * 1%;
+      animation-duration: 5s + math.random(5) * 1s;
+      animation-delay: math.random(5) * -1s;
+    }
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}

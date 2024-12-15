@@ -1,0 +1,39 @@
+@use 'variables' as vars;
+
+.tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+
+  &__layers {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: vars.$color-tree;
+    clip-path: polygon(
+      50% 0%,
+      80% 30%,
+      65% 30%,
+      85% 50%,
+      70% 50%,
+      100% 80%,
+      0 80%,
+      30% 50%,
+      15% 50%,
+      35% 30%,
+      20% 30%
+    );
+  }
+
+  &__trunk {
+    position: absolute;
+    bottom: 1px;
+    width: 50px;
+    height: 60px;
+    background-color: vars.$color-trunk;
+    border-radius: 0 0 10px 10px;
+  }
+}

@@ -1,0 +1,16 @@
+@use 'variables' as vars;
+
+.container {
+    position: relative; 
+    width: 75%;
+    max-width: 450px;
+    height: 404px;
+    background: linear-gradient(161deg, rgba(215, 103, 162, 0.36), rgba(172, 45, 173, 0.12));
+    border-radius: 20px;
+    padding: vars.$spacing-medium;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
